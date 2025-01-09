@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            /* border: 2px solid black; */
+            background-color: white;
+        }
+        
+
+        .one {
+            display: flex;
+
+        }
+
+        .six {
+            display: flex;
+        }
+
+        .three {
+            font-size: 29px;
+            font-family: Arial;
+            font-weight: 830;
+            color: rgb(6, 6, 141);
+            width: 82px;
+            margin-left: 10px;
+            margin-top: -4px;
+            padding: 0px;
+        }
+
+        .four {
+            font-size: 6px;
+            font-weight: 800;
+            font-family: Arial;
+            /* border: 1px solid black; */
+            margin-left: 11px;
+            margin-top: -3px;
+        }
+
+        .five {
+            margin-top: 13px;
+        }
+
+        .bi-house-door-fill {
+            height: 10px;
+            width: 30px;
+            background-color: rgb(6, 6, 141);
+            border-radius: 13px;
+            color: white;
+            padding: 9px;
+            font-size: 12px;
+            font-weight: 580;
+            font-family: Arial;
+        }
+
+        .bi-ticket-perforated-fill {
+            font-size: 20px;
+            margin-top: 50px;
+            height: 19px;
+
+        }
+
+        .Show {
+            font-weight: 500;
+            font-family: Arial;
+            font-size: 13px;
+            padding-top: 40px;
+        }
+
+        .bi-camera-reels-fills {
+            font-size: 20px;
+        }
+
+        .bi-percent {
+            font-size: 20px;
+        }
+
+        bi-cash-coin {
+            font-size: 20px;
+        }
+
+        bi-star-fill {
+            font-size: 20px;
+        }
+
+        bi-list {
+            font-size: 20px;
+        }
+
+        /* bi-chevron-down{
+        font-size:20px;
+    } */
+        .six {
+            margin-top: 15px;
+        }
+
+        .bi-search {
+            border: 2px solid grey;
+            padding: 6px;
+            margin-top: -3px;
+            width: 160px;
+            height: 15px;
+            text-align: left;
+            border-radius: 7px;
+            border-width: 1px;
+            font-family: Arial;
+            font-size: 13px;
+        }
+
+        .bi-crosshair {
+            border: 2px solid grey;
+            padding: 6px;
+            margin-top: -3px;
+            width: 95px;
+            height: 15px;
+            text-align: center;
+            border-radius: 7px;
+            border-width: 1px;
+            font-family: Arial;
+            font-size: 13px;
+            background-color: rgb(211, 211, 211);
+            display: inline;
+        }
+        
+
+        .bi-person-circle {
+            border: 2px solid grey;
+            padding: 6px;
+            margin-top: -3px;
+            width: 80px;
+            height: 15px;
+            text-align: center;
+            border-radius: 7px;
+            border-width: 1px;
+            font-family: Arial;
+            font-size: 13px;
+            background-color: rgb(211, 211, 211);
+        }
+        
+
+        .img{
+            margin-top: 10px;
+        }
+        .flex {
+            display: flex;
+            padding-left: 50px;
+            margin-top: -4px;
+            padding-top: 18px;
+            background-color: rgb(201, 231, 252);
+            height: 47px;
+            position: sticky;
+            top: 20px;  
+        }
+    
+
+        .quick {
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 4px;
+            padding-left: 15px;
+        }
+        .box{
+            width: 130px;
+            height: 24px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 13px;
+            font-family: Arial;
+            font-weight: 400;
+            border-radius: 3px;
+            margin-top: -4px;
+        }
+        .movies {
+            /* border: 1px solid black; */
+            color: rgb(30, 95, 148);
+            font-weight: 540;
+            background-color: rgb(201, 231, 252); 
+            padding: 5px;
+            border-radius: 4px;    
+            font-family:Arial;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 5px;
+        }
+        .cinema{
+            /* border: 1px solid black; */
+            font-weight: 540;
+            padding: 5px;
+            font-family:Arial;
+            
+        }
+        .select{
+            display: inline-block;
+            /* border: 2px solid grey; */
+            /* padding: 6px; */
+            margin-top: -4px;
+            width: 190px;
+            height: 25px;
+            text-align: left;
+            border-radius: 3px;
+            border-width: 1px;
+            font-family: Arial;
+            font-size: 13px;
+            background-color: white;
+            color: rgb(158, 158, 158);
+            padding-top: 8px;
+            padding-left: 9px;
+        
+    
+        }
+        .book{
+            border: 1px solid blue;
+            height: 24px;
+            width: 65px;
+            border-radius: 8px;
+            font-family: Arial;
+            background-color:  rgb(30, 95, 148);
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            align-items: center;
+            padding-top: 7px;
+            margin-top: -5px;
+            
+        }   
+
+        .top{
+            font-family: Arial;
+            /* border: 1px solid black; */
+            
+        }
+        .under{
+            text-decoration: underline;
+            text-underline-offset: 9px;
+            text-decoration-thickness: 2px;
+            /* text-decoration-; */
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="one">
+
+            <div class="two">
+                <div class="three">
+                    INOX
+                </div>
+                <div class="four">
+                    A PVR INOX EXPERIENCE
+                </div>
+            </div>
+            <div class="five">
+                &nbsp;&nbsp;<span class=" bi bi-house-door-fill">&nbsp;Home</span>
+                &nbsp;&nbsp&nbsp&nbsp<span class="bi bi-ticket-perforated-fill"></span>
+                &nbsp;<span class="Show">Showtimings</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-camera-reels-fill"></span>
+                &nbsp;<span class="Show">Cinemas</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-percent"></span>
+                &nbsp;<span class="Show">Offers</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-cash-coin"></span>
+                &nbsp;<span class="Show">Investor Section</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-star-fill"></span>
+                &nbsp;<span class="Show">Passport</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-list"></span>
+                &nbsp;<span class="Show">More</span>
+                &nbsp;<span class="bi bi-chevron-down"></span>
+            </div>
+            <div class="six">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-search">Search...</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class= "bi bi-crosshair">&nbsp;Bengaluru
+                <span class="zed bi bi-chevron-down"></span></span>
+                &nbsp;&nbsp;&nbsp;&nbsp; <span class="bi-person-circle">&nbsp;Login</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <section>
+
+        <div class="img">
+            <img src="../public/images/inox image pushpa2.png" alt="error" width="1300px" height="350px">
+        </div>
+        
+        <div class="flex">
+
+            <span class="quick">Quick&nbspBook&nbsp</span>&nbsp;&nbsp;&nbsp;
+
+            <div class="box">
+                &nbsp;<span class="movies">Movie</span>
+                <span class="cinema">Cinema</span>
+            </div>
+
+            &nbsp;&nbsp;&nbsp;<span class="select">Select&nbsp;Movie</span>&nbsp;&nbsp;
+            &nbsp;&nbsp;<span class="select">Select&nbsp;Date</span>&nbsp;&nbsp;
+            &nbsp;&nbsp;<span class="select">Select&nbsp;Cinema</span>&nbsp;&nbsp;
+            &nbsp;&nbsp;<span class="select">Select&nbsp;Timing</span>&nbsp;&nbsp;
+            &nbsp;&nbsp;<span class="book">Book</span>
+            <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top under">Now Showing</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top">Comming Soon</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top">Experiences</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top">Trailers</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top">Offers</span>
+            </div>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aut neque nihil eum incidunt, quos officia! Dolore odit ut, iste nulla hic aliquid quos odio quam, est facere ducimus, deleniti aut repellendus. A blanditiis nihil nesciunt odio veritatis in, alias soluta rerum sed ad minus quas rem culpa sequi porro natus doloribus nobis incidunt nostrum consectetur nulla. Amet veritatis dolorem iusto facere nobis, nesciunt dolore consectetur incidunt quia eligendi expedita illo natus dolores officia itaque, excepturi quo voluptate sapiente accusamus labore animi rerum rem odio. At nemo quibusdam fugit qui. Veritatis pariatur error explicabo consequatur. Debitis similique iste fugit accusantium soluta ex illum, iure aliquam eveniet quia fuga vel quaerat facilis, voluptatum, maxime dicta error aperiam? Consectetur quaerat sit architecto neque atque beatae animi voluptatum sunt in nihil exercitationem quas, maxime molestiae, qui delectus facilis distinctio assumenda dolor recusandae. Eius excepturi nobis quibusdam optio quasi ex esse eligendi eaque, omnis eveniet maxime doloribus veniam fugiat commodi! Animi numquam impedit nesciunt fugiat, temporibus mollitia, at qui architecto aut inventore fugit obcaecati nobis iure ullam ipsum debitis magni quisquam, incidunt repudiandae voluptas pariatur distinctio quod voluptatem corrupti! Exercitationem saepe autem dolores! Qui, doloremque fugit. Obcaecati corporis eum culpa eveniet! Quidem, beatae sapiente. Quaerat quia corrupti pariatur officia cum deserunt numquam vero, aliquid nulla illum commodi molestias eligendi amet tempore quas inventore? Nostrum neque nesciunt ipsa, earum modi debitis tempore tenetur amet error nobis? Recusandae, nobis corrupti nemo quam fuga distinctio similique assumenda culpa odit nostrum mollitia error. Quas, facere repellat sunt nihil consequuntur minima eos hic incidunt fuga, quasi exercitationem temporibus expedita sequi harum id obcaecati, dolorum vitae in nemo? Saepe alias at, excepturi sapiente, mollitia unde ipsam fugiat voluptates nesciunt animi tempore nam assumenda modi labore suscipit laudantium cumque, quas odio possimus enim optio accusamus dolor repudiandae. Nemo magnam, dolorum consequatur natus nobis corporis voluptatum sequi vel facilis deserunt reiciendis explicabo laborum consectetur fuga unde eligendi recusandae necessitatibus, praesentium cumque dicta. Labore deserunt aliquid non minus deleniti cumque explicabo quaerat. Deserunt autem magni et voluptatibus tempora cum sed sapiente excepturi quidem molestiae enim non nostrum, beatae, quo a quos officia laudantium rerum. Ducimus laudantium aut, corrupti quo repellat voluptates quos autem ad corporis eos porro beatae expedita repudiandae ut minima quaerat quia aperiam ex! Cumque optio modi ratione laborum, sapiente tempore dolorem? Numquam est asperiores praesentium recusandae, earum blanditiis quia, placeat sit accusamus iure dolorum quidem, quam minus beatae? Harum magni adipisci cum, et, distinctio amet reprehenderit, ab hic non animi dignissimos. Ratione est maiores corrupti maxime. Aut voluptatibus nostrum exercitationem cupiditate. Adipisci nostrum nemo voluptates rem dignissimos aspernatur! Libero omnis eius eveniet molestiae voluptatem est! Veritatis amet maiores, tempore iusto possimus cupiditate a esse temporibus! Tempora eius eligendi veritatis sint quos ipsam illo sed accusantium aspernatur et. Fuga dolorem autem molestiae harum exercitationem officiis amet laborum, quaerat nemo, dicta aperiam hic! Similique necessitatibus magnam libero illum dignissimos porro odio nobis laudantium harum ratione repellat, placeat voluptatum reprehenderit aliquid explicabo nemo consequuntur, quidem obcaecati doloremque magni facere optio? Odit fuga quod maxime voluptates libero rerum at non, officia, aut provident dolor? Numquam consectetur dolore odio, quo, itaque adipisci voluptas voluptate, tempora voluptates accusamus possimus? Ducimus itaque animi repellendus a commodi cumque eos aliquam quis nobis pariatur provident deserunt ullam, molestias dolore ab quod atque fuga magni similique voluptatem eaque nam consectetur. Aliquid, autem deleniti facere porro eaque maiores repellendus fuga, fugiat, minima tenetur voluptates laudantium officiis quos! Explicabo officia laboriosam repellat vitae! Veritatis doloremque fugiat laboriosam voluptatibus aliquid eligendi consectetur veniam earum modi assumenda, facere voluptate, officiis debitis distinctio facilis. Tenetur ea reprehenderit porro quae quam voluptatum incidunt qui ullam cum quia repudiandae vero eius libero assumenda praesentium quod, tempore, aliquam neque itaque, accusamus consectetur? At incidunt magnam voluptatibus eos quidem placeat ab explicabo dicta aliquam odit alias nesciunt, ex reprehenderit ut tempore quis voluptatum hic sunt praesentium consequatur dolore. Quibusdam quos consequatur facere doloribus qui quo minima magnam quasi placeat provident laudantium facilis tempore magni eum architecto, ex numquam adipisci corporis, illo sint officia veniam! Sit quo iusto corrupti earum, eum voluptatem exercitationem ab nemo possimus voluptates doloribus minima reprehenderit! Aliquid, ipsam perferendis veniam placeat nemo ipsum qui? Incidunt hic odio blanditiis repellendus quibusdam quo est, accusamus esse ipsa sit labore repellat fugit sint qui quidem ipsum! Dolorem nulla at a quas nisi, saepe vero sed minus hic obcaecati veniam laudantium totam magni sint eos dolore ex veritatis quam, est aliquam beatae ab optio. Harum cumque rem, quis labore exercitationem accusantium fuga amet, maiores delectus numquam voluptatibus, consectetur pariatur officia. Numquam itaque voluptas non iure ab explicabo. Pariatur, tenetur blanditiis quam repudiandae rerum corrupti voluptas nesciunt nostrum necessitatibus impedit voluptates suscipit veritatis nemo nihil sit ipsam? Quaerat facere possimus beatae, sit harum quod nihil sunt asperiores officia facilis eum necessitatibus minus quia eaque? Numquam libero fugit doloremque? Voluptates laudantium ad est aliquam error voluptatibus perspiciatis exercitationem, officia fugit magnam vitae laborum impedit, ipsam velit placeat quod veniam aliquid id, temporibus perferendis sit. Tenetur cumque ad a incidunt fugiat temporibus provident quod iste ratione non voluptates dolor sint molestiae, iusto quasi esse ducimus fuga eos culpa maxime error consequuntur consectetur nostrum? Ipsum reiciendis porro reprehenderit natus dolore vel in facere libero recusandae provident cupiditate sed obcaecati repellat cum eius maxime, necessitatibus, exercitationem molestias, voluptas quam? Corrupti totam amet aut consequatur voluptatum fugiat corporis quis excepturi. Laborum cupiditate natus iste repudiandae iure minus nihil saepe in earum, pari
+
+        </div>
+
+       
+        
+    </section>
+   
+</body>
+</html>
+

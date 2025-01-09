@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dl{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        fieldset{
+            border-radius: 25px;
+            background-image: url(/public/images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 600px;
+            padding: 20px;
+            box-shadow: 8px 8px 10px black;
+        }
+        dt{
+            background-color: black;
+            color: white;
+            font-family: Arial;
+            font-size: 13px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+            width: 150px;
+            padding: 8px;
+        }
+        legend{
+            background-color: black;
+            color: aliceblue;
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 8px 8px 10px rgb(118, 27, 118);
+        }
+        dd{
+            background-color: gray;
+            font-size: 13px;
+            width: 200px;
+            margin-bottom: 10px;
+            font-family: Arial;
+            margin-left: 80px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Person Details</legend>
+        <dl>
+            <dt>FirstName</dt>
+            <dd>SomeName</dd>
+
+            <dt>LastName</dt>
+            <dd>SomeName</dd>
+
+            <dt>Age</dt>
+            <dd>SomeAge</dd>
+        </dl>
+    </fieldset>
+</body>
+
+</html>

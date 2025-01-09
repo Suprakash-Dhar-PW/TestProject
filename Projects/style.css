@@ -1,0 +1,290 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+header {
+    display: flex;
+    background-color: #130f29;
+    height: 64px;
+    position:sticky;
+    top: 0px;
+   
+}
+
+/* BOX1 STYLING */
+.one {
+    border: 1.5px solid transparent;
+    margin: 8px;
+}
+
+.one:hover {
+    border: 1.5px solid white;
+}
+
+.two {
+    background-image: url(../public/images/amazonin.jpg);
+    background-size: cover;
+    height: 40px;
+    width: 120px;
+}
+
+/* BOX2 STYLING */
+
+.four {
+    display: flex;
+    color: white;
+    border: 1.5px solid transparent;
+    margin-left: 10px;
+    padding-top: 12px;
+
+
+}
+
+.four:hover {
+    border: 1.5px solid white;
+    margin: 8px;
+
+}
+
+.five {
+    margin-left: 3px;
+}
+
+.bi-geo-alt {
+    /* border: 1px solid red; */
+    padding-top: 8px;
+    align-items: center;
+}
+
+.deliver {
+    font-size: 12px;
+    color: #CCCCCC;
+}
+
+.India {
+    font-size: 14px;
+}
+
+/* BOX3 STYLING */
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: #eda942; */
+    width: 530px;
+    height: 50px;
+    /* border: 1px solid red; */
+
+    margin-top: 3px;
+    margin-left: 10px;
+
+}
+
+.bi-search {
+    color: black;
+    /* border: 1px   solid red; */
+    font-size: 1.2rem;
+    padding: 9.3px;
+    padding-right: 14px;
+    margin-top: 8px;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgb(247, 189, 42);
+}
+
+.select {
+    /* border: 1px solid red; */
+    padding: 8px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 15px;
+    margin-top: 8px;
+    background-color: #E6E6E6;
+    color: #0F1111;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+
+}
+
+.amazon {
+    padding: 8px;
+    margin-top: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    /* padding-right: 200px; */
+    border: 1.5px solid white;
+    width: 390px;
+
+}
+
+/* BOX4 STYLING */
+
+.box {
+    border: 1.5px solid transparent;
+}
+
+.box:hover {
+    border: 1.5px solid white;
+
+}
+
+.bi-caret-down-fill {
+    color: #dadada;
+    /* border: 1px solid red; */
+    font-size: 10px;
+    margin-left: -5px;
+
+
+}
+
+.india {
+    /* border: 1px solid orange; */
+    width: 20px;
+    margin-left: 10px;
+    margin-top: 25px;
+
+}
+
+.en {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 14px;
+    color: white;
+    /* border: 1px solid blue; */
+}
+
+/* BOX5 STYLING */
+
+.hello {
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.box2 {
+    display: flex;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.mega {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid transparent;
+    padding-top: 17px;
+}
+
+.mega:hover {
+    border: 1.5px solid white;
+}
+
+/* BOX6 STYLING */
+
+.box6 {
+    border: 1.5px solid transparent;
+    color: #FFFFFF;
+    padding-top: 14px;
+    margin-left: 10px;
+}
+
+.box6:hover{
+    border: 1.5px solid white;
+}
+
+.returns {
+    font-size: 12px;
+}
+
+.order {
+    font-size: 14px;
+}
+
+       /* BOX7 STYLING */
+
+.bi-cart2 {
+    font-size: 38px;
+    /* border: 1px solid black; */
+    color: white;
+}
+
+.carting {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -5px;
+}
+
+.cart {
+    margin-top: 8px;
+    border: 1.5px solid transparent;
+    margin-left: 19px;
+}
+
+.cart:hover{
+    border: 1.5px solid white;
+}
+
+
+
+section{
+    background-color:#232F3E;
+    height: 35px;
+    color: white;
+    display: flex;
+}
+
+.listing{
+    display: flex;
+    border: 1.5px solid transparent;
+    width: 50px;
+    padding-top: 8px;
+    margin-left: 17px;
+}
+
+.listing:hover{
+    border: 1.5px solid white;
+}
+
+
+.bi-list{
+    font-size: 26px;
+    /* border: 1px solid green; */
+    margin-top: -4px;
+}
+
+.AIML{
+    font-size: 14px;
+    /* border: 1px solid blue; */
+    margin-top: 2px;
+}
+
+     /* BOX2 STYLING */
+.MX{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 14px;
+    /* border: 1px solid red; */
+    padding-left: 10px;
+    align-items: center;
+    
+}
+
+.first{
+    border: 1.5px solid transparent;
+   
+}
+
+.first:hover{
+    border: 1.5px solid white;
+    padding: 8px;
+}
+
+
+
+     

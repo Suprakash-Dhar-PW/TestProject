@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        /* ol{
+           display: fl;
+           flex-direction: row;
+           justify-content: space-around;
+        }
+        .inline{
+            display: inline;
+            justify-content: space-around;
+            list-style-type: ;
+        } */
+         .choice{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            /* border: 1px solid black; */
+            margin-bottom: 10px;
+         }
+         .choice li{
+            padding-top: 10px;
+         }
+         .coloumn{
+            columns: 2;
+         }
+         .coloumn li{
+            padding-top: 10px;
+         }
+         /* .li{
+            margin-top: 10px;
+         } */
+    </style>
+</head>
+<body>
+    
+    <ol>
+        <li>Which of the following is not a oop language?
+        <ol type="a" class="choice">
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Javascript</li>
+        </ol>
+    </li>
+        <li class="li">Which of the following is not a oop language?
+        <ol type="a" class="coloumn">
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Javascript</li>
+        </ol>
+    </li>
+    </ol>
+</body>
+</html>

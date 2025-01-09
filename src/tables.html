@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        caption{
+            color: green;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 1270px;
+            height: 500px;
+          
+        }
+        th,td{
+            border: 3px solid seagreen;
+            text-align: center;
+        }
+        table img{
+            width: 100px;
+            height:50px;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Cricketer Details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Logo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sachin</td>
+                <td>51</td>
+                <td rowspan="2">M1</td>
+                <td rowspan="2">
+                    <img src="../public/images/amazoncom.jpg" alt="">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rohith</td>
+                <td>39</td>    
+            </tr>
+
+            <tr>
+                <td>Kholi</td>
+                <td>38</td>
+                <td>RCB</td>
+                <td>
+                    <img src="../public/images/xmas.jpg" alt="">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Dhoni</td>
+                <td>45</td>
+                <td>CSK</td>
+                <td>
+                    <img src="../public/images/Youtube.jpg" alt="">
+                    </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Information about players</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+
+</html>
