@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center mt-3">
+        <form action="" method="post" class="border border-2 border-primary w-25 p-2" >
+            <h3>Register User</h3>
+            <dl>
+                <dt>Username</dt>
+                <dd><input type="text" name="txtUsername" id="username" class="form-control"></dd>
+
+                <dt>Password</dt>
+                <dd><input type="password" name="pwdPassword" id="password" class="form-control"></dd>
+
+                <dt>Select City</dt>
+                <dd>
+                    <select name="select" id="select" class="form-select">
+                        <option value="BLR">Bengaluru</option>
+                        <option value="HYD">Hydrabad</option>
+                        <option value="MUM">Mumbai</option>
+                    </select>
+                </dd>
+
+                <dt>Price Range</dt>
+                <dd><input type="range" name="priceRange" id="range" class="form-range"></dd>
+
+                <dt>Subscribed</dt>
+                <dd class="form-switch"><input type="checkbox" name="checkbox" id="checkbox" class="form-check-input "><label for="yes" class="form-check-label">Yes</label></dd>
+                <dd><button class="bi bi-person-fill btn btn-primary w-100">Register User</button></dd>
+            </dl>
+        </form>
+    </div>
+</body>
+</html>
