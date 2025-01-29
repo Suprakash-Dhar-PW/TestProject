@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        textarea:read-only{
+            cursor: progress;
+            background-color: lightgray;
+        }
+        .check + span{
+            color: red;
+        }
+        .check:checked + span{
+            color: green;
+        }
+        .check:checked ~ button{
+            display: block;
+        }
+        .check   ~ button{
+            display: none;
+        }
+
+    </style>
+</head>
+<body class="container-fluid">
+    <form action="" class="mt-3">
+        <dl>
+            <dt>TextArea</dt>
+            <dd class="w-75">
+                <textarea name="txtInput" id="" readonly class="form-control" rows="5" cols="30">
+
+                    Our Terms and Services
+                    
+                </textarea><br>
+                <div>
+                <input type="checkbox" name="checkInput" id="" class="check">
+                <span>I Accept</span><br><br>
+                <button class="btn btn-primary">Submit</button>
+                </div>
+            </dd>
+           
+           
+        </dl>
+    </form>
+    
+</body>
+</html>
