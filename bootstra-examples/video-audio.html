@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function playvideo(){
+            //.1 Target the element called 'video1'
+            const video1=document.getElementById("video1")
+            console.log(video1);
+
+            //2. Play the video
+            video1.play();
+        }
+
+        function pausevideo(){
+            //1. Target the element called 'video1'
+            const video1=document.getElementById("video1")
+            console.log(video1);
+
+        }
+    </script>
+
+    <style type="text/css">
+        button{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <video id="video1" width="200" height="200" controls poster="../public/images/dummy.jpg">
+        <source src="../public/videos/video2.mp4" type="video/mp4">
+    </video>
+
+    <button onclick="playvideo()">Play</button>
+    <button onclick="pausevideo()">Pause</button>
+</body>
+</html>
