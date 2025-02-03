@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style type="text/css">
+        input[type="button"]{
+            background-color: red;
+        }
+        p[id]{
+            color: red;
+        }
+        img[width]{
+            border: 15px groove;
+            background-image:url(../public/images/mensfashionfashionstore.jpg);
+            /* src:url(../public/images/mensfashionfashionstore.jpg); */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <form action="">
+        <dl>
+            <dt>Username</dt>
+            <dd>
+                <input type="text" name="" id="">
+            </dd>
+
+            <dt>Password</dt>
+            <dd>
+                <input type="password" name="" id="">
+            </dd>
+        </dl>
+        <input type="button" value="submit">
+        <input type="button" value="reset">
+    </form>
+    
+    <hr>
+
+    <form action="">
+        <p>para-1</p>
+        <p id="p1">para-2</p>
+        <p>para-3</p>
+        <p id="p2">para-4</p>
+    </form>
+
+    <hr>
+
+    <form action="">
+        <img>
+        <img>
+        <img width="240" height="200">
+        <img>
+        <img>
+    </form>
+</body>
+</html>

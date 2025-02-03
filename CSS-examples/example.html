@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:first-child {
+            color: red;
+        }
+        div:first-child p:first-child{
+            color: blue;
+        }
+        div:nth-last-child(2n+1){
+            color: aqua;
+        }
+        div > p:last-child{
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>First Div - para1</p>
+        <p>First Div - para2</p>
+        <p>First Div - para3</p>
+    </div>
+    <div>
+        <p>Second Div - para1</p>
+        <p>Second Div - para2</p>
+        <p>Second Div - para3</p>
+    </div>
+    <div>
+        <p>Third Div - para1</p>
+        <p>Third Div - para2</p>
+        <p>Third Div - para3</p>
+    </div>
+</body>
+</html>

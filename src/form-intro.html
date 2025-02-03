@@ -9,7 +9,7 @@
         *{
             font-family: Arial, Helvetica, sans-serif;
         }
-        form {
+        .form {
             width: 200px;
             height: 200px;
             border: 3px dotted black;
@@ -25,8 +25,42 @@
 </head>
 
 <body>
+    <form action="" name="frmUpdate">
+        <dl>
+            <dt>AdhaarNumber</dt>
+            <dd>
+                <input type="text" name="txtUsername" value="9124912849214" readonly>
+            </dd>
+            
+            <dt>Name</dt>
+            <dd>
+                <input type="text" name="txtName" value="Suprakash Dhar">
+            </dd>
 
-    <form>
+            <dt>MotherName</dt>
+            <dd>
+                <input type="text" name="txtMotherName" value="Maitreyee Paul Dhar" autofocus>
+            </dd>
+
+            <dt>FatherName</dt>
+            <dd>
+                <input type="text" name="txtFatherName" value="Prabir Dhar" >
+            </dd>
+
+            <dt>DOB</dt>
+            <dd><input type="text" name="txtDOB" value="18/10/2005" readonly></dd>
+
+            <dt>Email Address</dt>
+            <dd>
+                <input type="text" name="txtUserEmail" autofocus >
+            </dd>
+        </dl>
+        <button name="btnUpdate" value="updateDetails">Update Button</button>
+        <button disabled>Add to Cart</button>
+    </form>
+    <br>
+    <br>
+    <form class="form">
         <h3>Using Form Container</h3>
         <label>Username</label><input type="text" name="txtUser">
         <label>Password</label><input type="password" name="txtPwd"><br><br>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        h1:hover{
+            color: red;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: Brush Script MT;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">Welcome to CSS</h1>
+    <script type="text/javascript">
+      document.getElementById("text").addEventListener("mouseenter",function(){
+        this.style.color="blue";
+        this.style.fontSize="30px";
+      })
+      document.getElementById("text").addEventListener("mouseleave",function(){
+        this.style.color="black";
+        this.style.fontSize="30px";
+      })
+    </script>
+</body>
+</html>

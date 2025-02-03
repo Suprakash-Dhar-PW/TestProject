@@ -1,0 +1,34 @@
+@media screen {
+    .container{
+        border: 1px solid black;
+        width: 300px;
+        padding: 10px;
+        background-color: gray;
+    }
+    dl dt{
+        font-weight: bold;
+    }
+    dl{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        line-height: 25px;
+    }
+    
+}
+
+@media print{
+    .container img{
+        display: none;
+    }
+    button{
+        display: none;
+    }
+    dl dt{
+        font-weight: bold;
+    }
+    dl{
+        display: grid;
+        grid-template-columns: 12fr;
+        line-height: 25px;
+    }
+}
