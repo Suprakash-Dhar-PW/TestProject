@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+        ol{
+            list-style-type: none;
+            display: flex;
+            flex-direction:row;
+            padding: 0px;
+        }
+        li{
+            margin-left: 10px;
+        }
+        .first-container li::after{
+            margin-left: 5px;
+            content:">>";
+        }
+        .first-container li:last-child::after{
+            content:"";
+        }
+        .second-container li::before{
+            margin-left: 5px;
+            content: "<<";
+        }
+        .second-container li:first-child::before{
+            content: "";
+        }
+        input::placeholder{
+            font-family: Arial;
+            color: red;
+            text-align: center;
+        }
+        p::selection{
+            background-color: yellow;
+            color: red;
+            text-decoration: line-through;
+            text-shadow: 5px 5px 5px red;
+            
+            /* font-family: Brush Script MT;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 40px;
+            These attributes are not supported for selection class i.e rules restrict them */
+
+        }
+    </style>
+</head>
+<body>
+    <ol class="first-container">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
+    </ol>
+    <hr>
+    <ol class="second-container">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
+    </ol>
+    <hr>
+    <input type="text" name="txtUsername" id="" placeholder="Enter your username">
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, provident atque accusamus quo aliquam explicabo tempore minus voluptatum, magnam a, eos iste dolores corrupti recusandae excepturi error porro accusantium! Harum impedit, libero, dicta, in cupiditate mollitia nobis nulla consequatur error eaque officiis similique quae non aut at velit? Ullam labore repellendus blanditiis animi maiores praesentium mollitia nostrum, reprehenderit quaerat a corporis eveniet optio quo! Modi repellendus quod suscipit velit repudiandae est quos veritatis consectetur eaque animi. Iusto cumque sit autem temporibus consequuntur voluptate porro quas nihil ullam perferendis pariatur voluptates incidunt, aliquam enim veniam assumenda vero fugiat ipsa. Libero nisi consequatur tenetur minima tempore, nostrum exercitationem ducimus dolore. Fuga voluptatibus mollitia pariatur ipsam quasi. Voluptatibus nemo itaque porro distinctio facilis, dolores vero tenetur eius adipisci ducimus perferendis rem rerum et, quos hic sapiente reiciendis? Nesciunt error nulla doloremque. Nemo vero cumque, placeat rem, tempora quos hic ex laudantium iste fuga quidem, autem molestias adipisci a labore odit asperiores perspiciatis nobis? Corporis, maxime illo! Tempore vero nisi quis eveniet maiores, esse in nihil excepturi cum enim facilis, beatae earum hic quo sunt ipsa similique quasi officiis magnam voluptates culpa at non neque. Quas dolorum aperiam cum ipsam impedit mollitia reiciendis ea?</p>
+</body>
+</html>

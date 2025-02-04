@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div:first-child {
+        /* div:first-child {
             color: red;
         }
         div:first-child p:first-child{
@@ -16,6 +16,12 @@
         }
         div > p:last-child{
             color:brown;
+        } */
+        div:first-of-type p:first-child{
+            color: red;
+        }
+        div:first-of-type p:nth-child(2n){
+            color: red;
         }
     </style>
 </head>
@@ -25,11 +31,13 @@
         <p>First Div - para2</p>
         <p>First Div - para3</p>
     </div>
+    <hr>
     <div>
         <p>Second Div - para1</p>
         <p>Second Div - para2</p>
         <p>Second Div - para3</p>
     </div>
+    <hr>
     <div>
         <p>Third Div - para1</p>
         <p>Third Div - para2</p>
