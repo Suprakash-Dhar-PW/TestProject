@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        .box{
+            display: flex;
+            justify-content: space-around;
+        }
+        .container{
+            background-image: url(../public/images/mensfashionfashionstore.jpg);
+            height: 300px;
+            width: 350px;
+            background-size: cover;
+            
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .fashion{
+            font-size: 35px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            text-shadow: 3px 3px 5px black;
+            /* border: 1px solid green; */
+            margin-top: 140px;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            background-color: white;
+            font-weight: bold;
+            /* border: 1px solid black; */
+            margin-top: 70px;
+        }
+        .container2{
+            background-image: url(../public/images/womenfashion.jpg);
+            height: 300px;
+            width: 350px;
+            background-size: cover;
+            
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .container3{
+            background-image: url(../public/images/kidsfashionfashionstore.jpg);
+            height: 300px;
+            width: 350px;
+            background-size: cover;
+            
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="fashion">
+                Men
+            </div>
+            <div>
+                <button>Shop Men <span class="bi bi-arrow-right" style="margin-left: 8px;"></span></button>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="fashion">
+                Women
+            </div>
+            <div>
+                <button>Shop Women <span class="bi bi-arrow-right" style="margin-left: 8px;"></span></button>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="fashion">
+                Kids
+            </div>
+            <div>
+                <button>Shop Kids <span class="bi bi-arrow-right" style="margin-left: 8px;"></span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

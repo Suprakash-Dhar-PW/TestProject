@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        html{
+            font-size: 16px;
+        }
+        .container{
+            font-size: 35px;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h3>Suprakash</h3>
+    <div class="container">
+        <h2>Hello User</h2>
+        <p>
+            Welcome to CSS
+        </p>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    let parent = document.querySelector(".container");
+    let h2 = document.querySelector("h2");
+    let h3 = document.querySelector("h3");
+    let p = document.querySelector("p");
+
+    let parentfontSize = window.getComputedStyle(parent).fontSize;
+    let h2fontSize = window.getComputedStyle(h2).fontSize;
+    let h3fontSize = window.getComputedStyle(h3).fontSize;
+    let pfontSize = window.getComputedStyle(p).fontSize;
+
+    console.log("parent container fontsize : ",parentfontSize );
+    console.log("h2 child element fontsize : ",h2fontSize);
+    console.log("h3 child element fontsize : ",h3fontSize );
+    console.log("p child elemnt fontsize : ",pfontSize );
+</script>
