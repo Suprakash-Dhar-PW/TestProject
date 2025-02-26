@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+        *{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+                display: flex;
+                justify-content: space-between;
+                background-color: lightcoral;
+                padding: 10px;
+            }
+            
+
+        @media screen and (orientation:landscape){
+            span{
+                margin-left: 8px;
+            }
+            #justify{
+                display: none;
+            }
+        }
+
+        @media screen and (orientation:portrait) {
+            #content1{
+               display: none;
+            }
+            #content2{
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <header class="mt-3">
+        <div class="fw-bold">
+            Shopper.
+        </div>
+        
+        <nav id="content1">
+            <span>Home</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Docs</span>
+        </nav>
+        <aside id="content2">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart3"></span>
+        </aside>
+        <span class="bi bi-justify" id="justify"></span>
+
+    </header>
+</body>
+</html>
+
+    <script type="text/javascript">
+        let menu_access = document.getElementById("justify");
+        let menu = document.getElementById("content1");
+        let icons = document.getElementById("content2");
+        let whole = document.getElementById("whole");
+
+        menu_access.addEventListener('click', function(){
+            if(menu.style.display === "none"){
+                menu.style.display = 'grid';
+                menu.style.icons = 'inline';
+            }
+            else{
+                menu.style.display = 'none';
+                icons.style.display = 'none';
+                whole.style.backgroundColor = 'none';
+            }
+        });
+    </script>

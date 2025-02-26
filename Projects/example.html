@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show on Click</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script defer src="script.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Icon (Using Bootstrap Icons) -->
+    <button id="toggleIcon" class="btn btn-primary">
+        <i class="bi bi-eye"></i> Show Items
+    </button>
+
+    <!-- Elements to Show -->
+    <div id="content" class="hidden mt-3">
+        <p>This is a hidden paragraph.</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("toggleIcon").addEventListener("click", function() {
+            let content = document.getElementById("content");
+            content.classList.toggle("hidden"); // Toggle visibility
+        });
+    </script>
+
+</body>
+</html>
