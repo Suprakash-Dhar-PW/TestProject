@@ -7,36 +7,53 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <style type="text/css">
-        *{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0px;
-            padding: 0px;
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        header{
-                display: flex;
-                justify-content: space-between;
-                background-color: lightcoral;
-                padding: 10px;
-            }
-            
-
-        @media screen and (orientation:landscape){
-            span{
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: lightcoral;
+            padding: 10px;
+            position: relative;
+        }
+        @media screen and (orientation:landscape) {
+            span {
                 margin-left: 8px;
             }
-            #justify{
+            #justify {
                 display: none;
             }
         }
-
         @media screen and (orientation:portrait) {
-            #content1{
-               display: none;
+            #content1, #content2 {
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background-color: black;
+                border-radius: 15px;
+                color: white;
+                padding: 15px;
+                width: 150px;
+                text-align: right;
+                z-index: 10;
+                display: none; /* This will be handled by JavaScript */
             }
-            #content2{
-                display: none;
+            #content1 span, #content2 span {
+                display: block;
+                padding: 8px;
             }
-
+            #content2 {
+                margin-top: 10px;
+            }
+        }
+        .show-menu {
+            display: flex !important;
         }
     </style>
 </head>
@@ -45,7 +62,7 @@
         <div class="fw-bold">
             Shopper.
         </div>
-        
+
         <nav id="content1">
             <span>Home</span>
             <span>Pages</span>
@@ -58,27 +75,21 @@
             <span class="bi bi-heart"></span>
             <span class="bi bi-cart3"></span>
         </aside>
-        <span class="bi bi-justify" id="justify"></span>
 
+        <span class="bi bi-justify" id="justify"></span>
     </header>
-</body>
-</html>
 
     <script type="text/javascript">
-        let menu_access = document.getElementById("justify");
-        let menu = document.getElementById("content1");
-        let icons = document.getElementById("content2");
-        let whole = document.getElementById("whole");
+        document.addEventListener("DOMContentLoaded", function () {
+            let menuAccess = document.getElementById("justify");
+            let menu = document.getElementById("content1");
+            let icons = document.getElementById("content2");
 
-        menu_access.addEventListener('click', function(){
-            if(menu.style.display === "none"){
-                menu.style.display = 'grid';
-                menu.style.icons = 'inline';
-            }
-            else{
-                menu.style.display = 'none';
-                icons.style.display = 'none';
-                whole.style.backgroundColor = 'none';
-            }
+            menuAccess.addEventListener("click", function () {
+                menu.classList.toggle("show-menu");
+                icons.classList.toggle("show-menu");
+            });
         });
     </script>
+</body> 
+</html>

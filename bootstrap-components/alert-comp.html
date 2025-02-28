@@ -12,11 +12,16 @@
 <body class="container-fluid">
     <h2>Alerts</h2>
 
-    <div class="container alert alert-danger alert-dismissible" data-bs-dismiss="alert">
-        <button  class="btn-close"></button>
-        <h3>Delete Record</h3>
-        <p>Record deleted succesfully</p>
+    <div class="container alert alert-danger alert-dismissible">
+        <button  class="btn btn-close" data-bs-dismiss="alert"></button>
+        <h3 class="alert-heading">Delete Record</h3>
+        <p class="alert-info">Record deleted succesfully</p>
         <a href="#" class="alert-link">Help?</a>
+    </div>
+    <div class="container alert alert-success">
+        <h3 class="alert-heading">Insert Record</h3>
+        <p class="alert-info">Inserted Record to Database succesfully</p>
+        <button  class="btn btn-success" data-bs-dismiss="alert">OK</button>
     </div>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
