@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Width Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .carousel-item img {
+            width: 100vw;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="container-fluid p-0">  
+
+    <div class="carousel slide" data-bs-ride="carousel" id="slideShow">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slideShow" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#slideShow" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#slideShow" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="../public/images/inox image pushpa2.png" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../public/images/inox image pushpa2.png" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="../public/images/inox image pushpa2.png" alt="">
+            </div>
+        </div>
+
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#slideShow" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slideShow" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

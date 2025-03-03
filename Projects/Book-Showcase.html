@@ -6,111 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Showcase</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
     <style type="text/css">
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        header h2 {
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
+        header{
+            background-color: #333;
             color: white;
-            padding: 10px;
-            font-size: 25px;
-            font-weight: bold;
+            padding: 3px;
+            width: 1300px;
+            /* border: 1px solid red; */
         }
-
-        header {
-            background-color: #1e1e1e;
-        }
-
-        header div {
-            background-color: black;
-            padding: 18px;
-        }
-
-        section h3 {
-            font-family: Arial, Helvetica, sans-serif;
-            /* border: 1px solid black; */
-            width: 180px;
-            padding: 15px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .whole {
-            background: linear-gradient(30deg, rgb(231, 136, 231), rgb(228, 108, 84), rgb(234, 234, 82));
-            height: 445px;
-            animation: gradientAnimation 5s infinite alternate;
-            background-size: 300% 300%;
-        }
-
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .box {
-            display: flex;
-        }
-        
-        .box1 {
-            margin: -10px 10px 30px 150px;
-            transition:3s;
-        }
-        
-        .box1:hover{
-            transform: rotateY(180deg);
-            transition: 3s;
-        }
-        
-        
-        .box2 {
-            margin: -10px 10px 30px 150px;
-            transition: 3s;
-        }
-
-        .box3 {
-            margin: -10px 10px 30px 150px;
-            transition: 3s;
-        }
-
-
-        .box2:hover {
-            transform: rotateY(180deg);
-            transition: 3s;
-        }
-
-        .box3:hover {
-            transform: rotateY(180deg);
-            transition: 3s;
-        }
-
-        footer div {
-            background-color: #1e1e1e;
-            color: white;
-            display: flex;
-            justify-content: center;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 11px;
-        }
+    .box{
+        display: flex;
+        justify-content: space-around;
+    }
 
         
     </style>
 </head>
 
-<body>
+<body class="container-fluid">
 
     <header>
         <h2>Welcome to Book Showcase</h2>
@@ -127,21 +42,21 @@
             <div class="box">
 
                 <div class="box1">
-                    <img src="../public/images/Manufacturing engineering and technology2.png" alt="">
+                    <img src="../public/images/Manufacturing engineering and technology2.png" alt="" width="200" height="250">
                 </div>
                 <p class="back1">
                     <a href="Manufacturing-engineering-and-technology.html">Click For Details</a>
                 </p>
 
                 <div class="box2">
-                    <img src="../public/images/50 revolutionary inventions.jpg" alt="">
+                    <img src="../public/images/50 revolutionary inventions.jpg" alt="" width="200" height="250">
                 </div>
                 <p class="back2">
                     <a href=""></a>
                 </p>
 
                 <div class="box3">
-                    <img src="../public/images/Making sense of mindfullness.png" alt="">
+                    <img src="../public/images/Making sense of mindfullness.png" alt="" width="200" height="250">
                 </div>
 
             </div>
@@ -154,6 +69,9 @@
             &#169;2025 Book Showcase | All rights reserved
         </div>
     </footer>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
