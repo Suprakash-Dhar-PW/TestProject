@@ -1,77 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Showcase</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>BookShow Case</title>
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <style type="text/css">
-        header{
-            background-color: #333;
-            color: white;
-            padding: 3px;
-            width: 1300px;
-            /* border: 1px solid red; */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-    .box{
-        display: flex;
-        justify-content: space-around;
-    }
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        .box1 span{
+            margin-left: 15px;
+        }
+        .box2 h3{
+            font-family:'Times New Roman', Times, serif;
+            margin-top: 5px;
+            margin-left: 130px;
+        }
+        .box3 span{
+            margin-right: 15px;
+        }
+        .box3 button{
+            margin-right: 15px;
+        }
+        a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        nav{
+            background-color: #333;
+            color: whitesmoke;
+            padding: 0.5%;
+        }
 
+        nav span{
+            border-radius: 10px;
+            padding: 10px;
+        }
         
+        nav span:hover{
+            background-color: white;
+        }
+
+        nav a span:hover{
+            color: black;
+        }
+
+        img{
+            width: 100%;
+            height:82vh;
+        }
+        .card-img-top{
+            height: 50%;
+        }
+        .popular h2{
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .popular{
+            display: flex;
+            justify-content: center;
+        }
+
+        .card-text{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: justify;
+        }
     </style>
 </head>
-
 <body class="container-fluid">
-
-    <header>
-        <h2>Welcome to Book Showcase</h2>
-        <div>
-
-        </div>
-    </header>
-
-    <section>
-        <div class="whole">
-
-            <h3>Explore Books</h3>
-
-            <div class="box">
-
-                <div class="box1">
-                    <img src="../public/images/Manufacturing engineering and technology2.png" alt="" width="200" height="250">
-                </div>
-                <p class="back1">
-                    <a href="Manufacturing-engineering-and-technology.html">Click For Details</a>
-                </p>
-
-                <div class="box2">
-                    <img src="../public/images/50 revolutionary inventions.jpg" alt="" width="200" height="250">
-                </div>
-                <p class="back2">
-                    <a href=""></a>
-                </p>
-
-                <div class="box3">
-                    <img src="../public/images/Making sense of mindfullness.png" alt="" width="200" height="250">
-                </div>
-
+    <header class="mt-1">
+        <nav class="border border-2 d-flex justify-content-between align-items-center text-center">
+            <div class="box1">
+                <a href="http://127.0.0.1:5503/Projects/Book-Showcase.html"><span>Home</span></a>
+               <a href="http://127.0.0.1:5503/Projects/Books.html"> <span>Books</span></a>
             </div>
-
+            <div class="box2">
+                <h3>THE ESCAPE ROUTE</h3>
+            </div>
+            <div class="box3">
+                <a href="http://127.0.0.1:5503/Projects/About.html"><span>About</span></a>
+                <a href="http://127.0.0.1:5503/Projects/Contact.html"><span>Contact</span></a>
+                <a href="http://127.0.0.1:5503/Projects/Login.html"><span>Login</span></a>
+                <a href="https://www.instagram.com/encoure05/"><button class="bi bi-instagram btn btn-danger"></button></a>
+            </div>
+        </nav>
+    </header>
+    <section class=" mt-2 border border-2 border- rounded-3">
+        <div class="carousel slide" id="carouselExample" data-bs-ride="carousel" data-bs-theme="dark">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../public/images/carousal-book3.jpg" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../public/images/carousal-4.jpg" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../public/images/carousal-5.jpg" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"\></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"\></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
-    <footer>
-        <div>
-            &#169;2025 Book Showcase | All rights reserved
+        <div class="popular mt-3"><h2 class="text-center">POPULAR BOOKS AND THIER AUTHORS</h2></div>
+
+    <main class="d-flex justify-content-around">
+        <div class="card mt-3" style="width: 18rem;">
+            <img src="../public/images/jk rowling.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">J.K.ROWLING</h5>
+              <p class="card-text">Known for the Harry Potter series, a globally successful fantasy series for young adults and adults..</p>
+              <a href="#" class="btn btn-primary w-100">Book</a>
+            </div>
         </div>
-    </footer>
+       
+        <div class="card mt-3" style="width: 18rem;">
+            <img src="../public/images/jane austen.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">JANE AUSTEN</h5>
+              <p class="card-text">Famous for Pride and Prejudice, a classic novel exploring love, marriage, and social class in Regency England.</p>
+              <a href="#" class="btn btn-primary w-100">Book</a>
+            </div>
+        </div>
+        <div class="card mt-3" style="width: 18rem;">
+            <img src="../public/images/jk rowling.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">J.K.ROWLING</h5>
+              <p class="card-text">Known for the Harry Potter series, a globally successful fantasy series for young adults and adults..</p>
+              <a href="#" class="btn btn-primary w-100">Book</a>
+            </div>
+        </div>
+     
+    </main>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
-
 </html>
