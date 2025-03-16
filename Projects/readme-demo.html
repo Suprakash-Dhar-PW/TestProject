@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More Button</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.more-text {
+    display: none;
+}
+
+.read-more {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="text" id="text">
+            This is some text that is initially visible. 
+            <span class="more-text" id="more-text">
+                Here is the additional content that will be revealed when the "Read More" button is clicked. 
+                You can add as much content as you want here.
+            </span>
+        </p>
+        <button class="read-more" id="read-more-btn" onclick="toggleReadMore()">Read More</button>
+    </div>
+
+    <script>
+        function toggleReadMore() {
+        var moreText = document.getElementById("more-text");
+        var readMoreBtn = document.getElementById("read-more-btn");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";  // Show more text
+        readMoreBtn.textContent = "Read Less";  // Change button text
+    } else {
+        moreText.style.display = "none";  // Hide extra text
+        readMoreBtn.textContent = "Read More";  // Change button text back
+    }
+}
+
+    </script>
+</body>
+</html>

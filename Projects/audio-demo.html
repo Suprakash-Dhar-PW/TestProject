@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .audio-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.audio-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.audio-player {
+    width: 100%;
+    height: 50px;
+}
+
+.audio-section h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.audio-section .audio-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+.audio-section .audio-player {
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <section>
+        <div class="popular mt-5">
+            <h2 class="text-center">POPULAR QUOTES BY THE ABOVE AUTHORS</h2>
+        </div>
+        <main class="d-flex">
+            <div><h5 class="ms-5">J.K. ROWLING &nbsp;---------------------------></h5></div>
+            <div>
+                <p class="quote">“Youth can not know how age thinks and feels. But old men are guilty if they forget what it was to be young."</p>
+            </div>
+        </main>
+        <div class="audio-section mt-4">
+            <h5 class="text-center">Quote Recorded On Audio</h5>
+            <div class="audio-card text-center p-4">
+                <audio class="audio-player" controls>
+                    <source src="../public/audio/jk rowling.mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
