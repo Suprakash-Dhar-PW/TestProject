@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style type="text/css">
+        .container-fluid {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .form-range {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body class="container-fluid border border-2 border-black">
+    <header>
+        <h2 class="bg-black text-white p-2 text-center">Personal Loan EMI Calculator</h2>
+    </header>
+    <section>
+        <div class="d-flex justify-content-around mt-3">
+            <div class="d-flex ms-2">
+                <div>
+                    Amount you need
+                </div>
+                <div class="ms-2">
+                    &#8377; <input type="text" name="txtNumber" id="money" size="10">
+                </div>
+            </div>
+            <div class="d-flex">
+                <div>
+                    for
+                </div>
+                <div class="ms-2">
+                    <input type="text" name="txtNumber" id="year" size="2"> years
+                </div>
+            </div>
+            <div class="d-flex">
+                <div>
+                    interest rate
+                </div>
+                <div class="ms-2">
+                    <input type="text" name="txtNumber" id="rate" size="4"> %
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around mt-3">
+            <div>
+                <span>&#8377;50,000</span><input type="range" name="" id="range1" class="form-range" min="50000"
+                    max="1000000"> <span>&#8377;10,00,000</span>
+            </div>
+            <div style="margin-left: 100px;">
+                <span>1</span> <input type="range" name="" id="range2" class="form-range" min="1" max="5">
+                <span>5</span>
+            </div>
+            <div style="margin-left: 100px;">
+                <span>10.25%</span> <input type="range" name="" id="range3" class="form-range" min="10.25" max="18.45">
+                <span>18.45%</span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-primary" style="margin-right: 20px; margin-top: 30px;">Calculate</button>
+        </div>
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script type="text/javascript">
+        let money = document.getElementById("money");
+        let year = document.getElementById("year");
+        let rate = document.getElementById("rate");
+
+        let range1 = document.getElementById("range1");
+        let range2 = document.getElementById("range2");
+        let range3 = document.getElementById("range3");
+
+        // Update input box when range slider changes
+        range1.addEventListener("input", function () {
+            money.value = range1.value;
+        });
+
+        range2.addEventListener("input", function () {
+            year.value = range2.value;
+        });
+
+        range3.addEventListener("input", function () {
+            rate.value = range3.value;
+        });
+
+        // Update range slider when input box changes
+        money.addEventListener("input", function () {
+            range1.value = money.value;
+        });
+
+        year.addEventListener("input", function () {
+            range2.value = year.value;
+        });
+
+        rate.addEventListener("input", function () {
+            range3.value = rate.value;
+        });
+
+    </script>
+
+</body>
+
+</html>

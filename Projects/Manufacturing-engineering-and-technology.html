@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <style type="text/css">
         * {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
         }
 
         header h2 {
@@ -19,7 +20,7 @@
             justify-content: center;
             color: white;
             padding: 10px;
-            font-size: 25px;
+            font-size: clamp(20px, 4vw, 25px);
             font-weight: bold;
         }
 
@@ -35,30 +36,50 @@
         section {
             display: flex;
             justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, rgb(231, 136, 231), rgb(228, 108, 84), rgb(234, 234, 82));
+            animation: gradientBG 15s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .section {
-            margin: 40px;
-            width: 600px;
-            padding: 25px;
+            margin: 20px;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
             border-radius: 10px;
             background-color: white;
         }
 
         img {
             margin-top: 10px;
+            width: 100%;
+            height: auto;
+            max-width: 60%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         details {
             margin-top: 10px;
         }
 
-        section {
-            background: linear-gradient(30deg, rgb(231, 136, 231), rgb(228, 108, 84), rgb(234, 234, 82));
-        }
-
         h5 {
             margin-top: 20px;
+            font-size: clamp(16px, 3vw, 20px);
         }
 
         footer div {
@@ -68,23 +89,60 @@
             justify-content: center;
             font-family: Arial, Helvetica, sans-serif;
             padding: 8px;
+            font-size: clamp(12px, 2vw, 16px);
         }
 
         .feedback {
             display: flex;
             justify-content: center;
+            width: 100%;
         }
 
         dl {
             border-radius: 10px;
-            width: 350px;
+            width: 100%;
+            max-width: 350px;
             padding: 20px;
             background-color: rgb(215, 215, 215);
         }
 
-        img{
-            width: 60%;
-            height: 45%;
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            header div {
+                padding: 10px;
+            }
+
+            dl {
+                padding: 15px;
+            }
+
+            .btn {
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            details summary {
+                font-size: 14px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            .form-control {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -92,29 +150,23 @@
 <body>
     <header>
         <h2>Book Showcase: Book 1 Details</h2>
-        <div>
-
-        </div>
+        <div></div>
     </header>
 
     <section>
         <div class="section">
             <h5><b>Book 1:Exploring Technology</b></h5>
-            <img src="../public/images/Manufacturing engineering and technology2.png" alt="">
+            <img src="../public/images/Manufacturing engineering and technology2.png" alt="Book Cover">
 
             <details>
-                <summary>
-                    <b>Genre</b>
-                </summary>
+                <summary><b>Genre</b></summary>
                 <ul>
                     <li>Technology</li>
                     <li>Education</li>
                 </ul>
             </details>
             <details>
-                <summary>
-                    <b>Index Page</b>
-                </summary>
+                <summary><b>Index Page</b></summary>
                 <ul>
                     <li>Introduction</li>
                     <li>Chapter 1:Overview</li>
@@ -122,37 +174,22 @@
                 </ul>
             </details>
             <details>
-                <summary>
-                    <b>Authors</b>
-                </summary>
+                <summary><b>Authors</b></summary>
                 Jane Doe, Jhon Smith
             </details>
             <details>
-                <summary>
-                    <b>Overview</b>
-                </summary>
-                This book provides detailed insights into technology and communication skills for
-                professionals and
-                students
+                <summary><b>Overview</b></summary>
+                This book provides detailed insights into technology and communication skills for professionals and students
             </details>
             <details>
-                <summary>
-                    <b>Competetive Exam Relevence</b>
-                </summary>
+                <summary><b>Competetive Exam Relevence</b></summary>
                 Highly recommended for IT and communication-related government exams.
             </details>
             <details>
-                <summary>
-                    <b>Purchase Links</b>
-                </summary>
+                <summary><b>Purchase Links</b></summary>
                 <ul>
-                    <li><a
-                            href="https://www.amazon.in/Manufacturing-Engineering-Technology-SI-Kalpakjian/dp/9810694067/ref=sr_1_5?crid=KR0J9V8SKO55&dib=eyJ2IjoiMSJ9.nSclf9WjkZyk5O6iQ3EmNNQy_rtiAr_nbxAHZbn6EcbIKkD_KtQ8-ip4NSvMlx2lWp4OGl4OHUzNNFFy0gkPDRgoCzkeF1ZyM6T5UFWKtCrWXXHb3x_IiSOqDcRgUWQmguotTogowjgvCbmhBEYNncZmkT3BhgnNejG0d8nEiMN8olhc3Z246iG8AQ7nuC0Z4YhPLDdvHDdeohZpAoTYwi7_ko4Yepm8C3Ah5YQYfMM.mKKufVYaf_OsQpzYB5q-HT5EgFti7atBSaE7AvYUqsU&dib_tag=se&keywords=manufacturing+engineering+and+technology&qid=1740378931&sprefix=manufacturing+engineering+and+technology+%2Caps%2C314&sr=8-5">Amazon</a>
-                    </li>
-
-                    <li><a
-                            href="https://www.flipkart.com/manufacturing-engineering-technology-si-units/p/itm48c973de09a40?pid=9789810694067&lid=LSTBOK9789810694067PWR3GQ&marketplace=FLIPKART&q=manufacturing+engineering+and+technology&store=bks&srno=s_1_12&otracker=AS_QueryStore_OrganicAutoSuggest_1_26_sc_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_26_sc_na_na&fm=organic&iid=54405842-a3dc-4fb4-8357-79f4cdfd2df5.9789810694067.SEARCH&ppt=hp&ppn=homepage&ssid=y6ihdbmx5c0000001740378829404&qH=ff61698f4bca687d">Flipkart</a>
-                    </li>
+                    <li><a href="https://www.amazon.in/Manufacturing-Engineering-Technology-SI-Kalpakjian/dp/9810694067/ref=sr_1_5?crid=KR0J9V8SKO55&dib=eyJ2IjoiMSJ9.nSclf9WjkZyk5O6iQ3EmNNQy_rtiAr_nbxAHZbn6EcbIKkD_KtQ8-ip4NSvMlx2lWp4OGl4OHUzNNFFy0gkPDRgoCzkeF1ZyM6T5UFWKtCrWXXHb3x_IiSOqDcRgUWQmguotTogowjgvCbmhBEYNncZmkT3BhgnNejG0d8nEiMN8olhc3Z246iG8AQ7nuC0Z4YhPLDdvHDdeohZpAoTYwi7_ko4Yepm8C3Ah5YQYfMM.mKKufVYaf_OsQpzYB5q-HT5EgFti7atBSaE7AvYUqsU&dib_tag=se&keywords=manufacturing+engineering+and+technology&qid=1740378931&sprefix=manufacturing+engineering+and+technology+%2Caps%2C314&sr=8-5">Amazon</a></li>
+                    <li><a href="https://www.flipkart.com/manufacturing-engineering-technology-si-units/p/itm48c973de09a40?pid=9789810694067&lid=LSTBOK9789810694067PWR3GQ&marketplace=FLIPKART&q=manufacturing+engineering+and+technology&store=bks&srno=s_1_12&otracker=AS_QueryStore_OrganicAutoSuggest_1_26_sc_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_26_sc_na_na&fm=organic&iid=54405842-a3dc-4fb4-8357-79f4cdfd2df5.9789810694067.SEARCH&ppt=hp&ppn=homepage&ssid=y6ihdbmx5c0000001740378829404&qH=ff61698f4bca687d">Flipkart</a></li>
                 </ul>
             </details>
 
@@ -174,7 +211,7 @@
 
     <footer>
         <div>
-            &#169;2025 Book Showcase | All rights reserved
+            ©2025 Book Showcase | All rights reserved
         </div>
     </footer>
 </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: green;
+            font-size: 20px;
+            font-family: Brush Script MT;
+            font-weight: bold;
+        }
+
+        .failure{
+            color: rgb(240, 7, 7);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Enter OTP</dt>
+        <dd>
+            <input type="text" name="" id="otp" size="4" onblur="validation()">
+        </dd>
+        <p id="info">
+
+        </p>
+    </dl>
+    <script type="text/javascript">
+        function validation(){
+            //target the element
+            let otp = document.getElementById("otp");
+            let info = document.getElementById("info");   
+
+            //colect the input from the user(string)
+            otpResult = otp.value;
+
+            //Do validation (3456) : success otherwise : failure
+            console.log(typeof otpResult);
+
+            condition = otpResult === "3456"
+
+
+            if(condition){
+                console.log("success");
+                info.innerHTML = "OTP VALID".fontsize(20).fontcolor("violet").bold().italics();
+                info.className = "success";
+            }
+            else{
+                console.log("failure");
+                info.textContent = "OTP INVALID";
+                info.className = "failure";
+            }
+        }
+    </script>
+</body>
+</html>
