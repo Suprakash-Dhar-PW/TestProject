@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class 1</title>
+</head>
+<body>
+    <div>
+        <p class="example1">Hello</p>
+        <p class="example1">World</p>
+    </div>
+    <script type="text/javascript">
+        let arr = document.getElementsByClassName("example1");
+        let arr1 = Array.from(arr);
+        
+        let iterate = function(element){
+            element.style.cssText = 'color:blue; font-size:25px; ';
+            element.style.fontSize = '25px';
+            element.style.fontFamily = 'Algerian';
+        }
+        arr1.forEach(iterate);
+
+        let iterate2 = function(element){
+            element.style.color = 'red';
+            element.style.fontFamily = 'Arial';
+        }
+        let arr2 = document.querySelectorAll(".example1");
+        arr2.forEach(iterate2);
+
+        
+    </script>
+</body>
+</html>
