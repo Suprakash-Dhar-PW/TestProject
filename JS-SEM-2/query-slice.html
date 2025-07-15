@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>Username</dt>
+        <dd>
+            <input type="text" name="username" id="txtUsername">
+        </dd>
+        <dt>Email</dt>
+        <dd>
+            <input type="text" name="email" id="txtEmail">
+        </dd>
+    </dl>
+    <script type="text/javascript">
+        let qs = window.location.search;
+        console.log(qs);
+        console.log("Key is : ", qs.slice(1, qs.indexOf('=')));
+        console.log("Value is : ", qs.slice(qs.indexOf('=')+1, qs.indexOf("&")));
+    </script>
+</body>
+</html>

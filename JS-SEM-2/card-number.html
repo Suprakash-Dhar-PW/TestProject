@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <dl>
+        <dt>Your Card Number</dt>
+        <dd class="input-group">
+            <input type="text" id="cardnumber">
+            <img src="" alt="" border="1" style="width: 30px;height: 30px;display: none;">
+        </dd>
+        <dd id="lblMsg" style="display: none;">
+            Please Enter Valid Card Number
+        </dd>
+    </dl>
+
+    <script>
+        document.getElementById("cardnumber").addEventListener("keyup", function(){
+            let data = this.value;
+            const poster = document.querySelector("img")
+            if(data.length>=4){
+                if(data.startsWith("4455")){
+                    poster.style.display = 'block';
+                    poster.src = '../public/images/Visa.png';
+                    document.getElementById("lblMsg").style.display = 'none';
+                }   
+                else if(data.startsWith("2255")){
+                    poster.style.display = 'block';
+                    poster.src = '../public/images/MasterCard.png';
+                    document.getElementById("lblMsg").style.display = 'none';
+                }
+                else if(data.length==0){
+                    poster.style.display = 'none';
+                    document.getElementById("lblMsg").style.display = 'block';
+                }
+                else{
+                    poster.style.display = 'none';
+                    document.getElementById("lblMsg").style.display = 'block';
+                }
+            }
+            else if(data.length<4){
+                document.getElementById("lblMsg").style.display = 'block';
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let a = 'sachinrameshtendulkar';
+        console.log(a.slice(6)); //rameshtendulkar
+        console.log(a.slice(6,12)); //ramesh
+
+        console.log(a.slice(0,-6)); //sachinrameshten
+        console.log(a.slice(0,a.length - 6)); //sachinrameshten
+        console.log(a.slice(5,3)); //nothing
+
+        console.log(a.slice(-5,-3)); //ul
+        console.log(a.slice(a.length-5,a.length-3)); //ul
+
+        console.log(a.slice());
+        console.log('*****');
+
+        console.log(a.slice(undefined, undefined));
+        console.log(a.slice(NaN, undefined));
+
+        console.log(a.slice(0, 0));
+        console.log(a.slice(null, null));
+        
+        console.log(a.slice(null, undefined));
+        console.log(a.slice(a.slice(null,undefined),a.slice(0,6)));
+
+    </script>
+</body>
+</html>
