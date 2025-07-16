@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <button class="bi bi-sort-alpha-down btn btn-primary mt-3" id="button"></button>
+    <script>
+        document.getElementById('button').addEventListener("click", function(){
+            this.className = (this.className === 'btn btn-primary mt-3 bi bi-sort-alpha-down' ? 'btn btn-primary mt-3 bi bi-sort-alpha-up' : 'btn btn-primary mt-3 bi bi-sort-alpha-down');
+        })
+    </script>
+</body>
+</html>

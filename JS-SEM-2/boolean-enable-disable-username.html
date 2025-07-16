@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <input type="checkbox" id="txtCheckbox" style="margin-top: 25px;"> Enable | Disable
+    <dl>
+        <dt>Username</dt>
+        <dd>
+            <input type="text" id="txtUsername">
+        </dd>
+        <dd id="lblMsg">
+
+        </dd>
+    </dl>
+    <script type="text/javascript">
+        document.getElementById('txtCheckbox').addEventListener("change", function () {
+            const username = document.getElementById('txtUsername');
+            if(this.checked){
+                username.disabled = true;
+                // username.setAttribute("disabled", true); 
+                document.getElementById("lblMsg").innerText = "Input is disabled.";
+            }
+            else{
+                username.disabled = false;
+                // username.removeAttribute("disabled");
+                document.getElementById("lblMsg").innerText = "Input is enabled.";
+            }})
+    </script>
+</body>
+
+</html>
