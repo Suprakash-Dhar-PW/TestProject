@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>SHOW</button>
+    <div style="margin-top: 25px; display: none;" id="box">
+        <img src="../public/images/mensfashionfashionstore.jpg" alt="">
+    </div>
+    <script type="text/javascript">
+        document.querySelector("button").addEventListener("click", function(){
+            const img = document.getElementById("box");
+            const data = this.textContent;
+           img.style.display = (data === 'SHOW') ? 'block' : 'none';
+           this.textContent = (data === 'SHOW') ? 'HIDE' : 'SHOW';
+        })
+        </script>
+</body>
+</html>
