@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>Number-1</dt>
+        <dd><input type="text" id="num1"></dd>
+        <dt>Number-2</dt>
+        <dd><input type="text" id="num2"></dd>
+        <dt>Select</dt>
+        <dd>
+            <select name="" id="sel">
+                <option value="Addition">Addition</option>
+                <option value="Subtraction">Subtraction</option>
+                <option value="Multiplication">Multiplication</option>
+                <option value="Division">Division</option>
+            </select>
+        </dd> 
+    </dl>
+    <button onclick="getValue()">Submit</button>
+    <p id="lblMsg">
+
+    </p>
+    <script>
+        
+        function getValue(){
+            const num1 = Number(document.getElementById("num1").value);
+            const num2 = Number(document.getElementById("num2").value);
+            const sel = document.getElementById("sel").value;
+            const lblMsg = document.getElementById("lblMsg");
+            switch (true){
+                case (sel=='Multiplication'):
+                    lblMsg.textContent = (num1*num2);
+                    break;
+                case (sel=='Addition'):
+                    lblMsg.textContent = (num1+num2);
+                    break;
+                case (sel=='Subtraction'):
+                    lblMsg.textContent = (num1-num2);
+                    break;
+                case (sel=='Division'):
+                    lblMsg.textContent = num2 !== 0 ? (num1 / num2) : 'Cannot divide by zero';
+                    break;
+                default:
+                    lblMsg.textContent = 'Invalid';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

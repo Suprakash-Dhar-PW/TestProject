@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    var n = 18; 
+    switch (true){ //RULE 1: (i)type must be exactly matched(It uses strict comparison)
+                //(ii)Internally the data would be stored in the form of key value pair (Map) for comparison
+            case (n>=15 && n<=20): 
+                 //RULE 2: (i)Cases can be duplicated as JavaScript is Object based
+                console.log("It is in the range of 15-20");
+                break;              //(ii)As it is Object based so it would work as key value pair
+            default:    //RULE 3: Case Level value can be of any type because internaly it uses value for a map
+                console.log("Default");
+                break;
+            // default:    //RULE 3: Case Level value can be of any type because internaly it uses value for a map
+            //     console.log("Default");
+            //     break;//RULE 4: Even String type value is supported for a key in switch
+        }//RULE 5: It is possible to wirte one block for multiple cases
+        //RULE 6: Never use NaN as a value in switch i.e NaN should never be used for comparing
+        //why? --> NaN === NaN (false) rest everything is true like null === null(true)
+        console.log("Control is ON");
+
+        // FaQ's
+        //Can we define switch with default?
+        //--> Yes but it is not a good practice as it will show no output
+        //Can we define default above and between?
+        //Yes, duplicate default case is not permitted
+        //Can we use case without "Jump Statement" in switch[break]?
+        //Yes we can this phenomenon is refered as 'Fail through'
+        //Can we use return as a jump statement in switch?
+        //No, it results in 'Syntax error'
+        //What is the diff btw break and return?
+        //break: It will terminate the block and control will continue with normal flow of execution [Compiler is ON]
+        //return: It is permitted but it will use Strict comparison against the value supplied at runtime
+        // Can we define multiple cases for a single input
+        //Yes, we can define with the help of fallthrough
+        //How to define a case with range of values
+        // we could write expressions and evaluate within the range like shown above
+    </script>
+</body>
+</html>

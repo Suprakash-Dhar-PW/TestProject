@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    var n = null; 
+    switch (n){ //RULE 1: (i)type must be exactly matched(It uses strict comparison)
+                //(ii)Internally the data would be stored in the form of key value pair (Map) for comparison
+            case null: 
+                 //RULE 2: (i)Cases can be duplicated as JavaScript is Object based
+                console.log("null");
+                break;              //(ii)As it is Object based so it would work as key value pair
+            case undefined:
+                console.log("Undefined");
+                break;
+            case NaN:
+                console.log("Not a Number") 
+                break;
+            default:    //RULE 3: Case Level value can be of any type because internaly it uses value for a map
+                console.log("Default");
+                break;//RULE 4: Even String type value is supported for a key in switch
+        }//RULE 5: It is possible to wirte one block for multiple cases
+        //RULE 6: Never use NaN as a value in switch i.e NaN should never be used for comparing
+        //why? --> NaN === NaN (false) rest everything is true like null === null(true)
+
+        // FaQ's
+        //Can we define switch with default?
+        //--> Yes but it is not a good practice as it will show no output
+
+    </script>
+</body>
+</html>

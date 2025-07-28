@@ -6,17 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <button>SHOW</button>
+    <!-- <button onclick="showimg()">SHOW</button> -->
+    <button onclick="showimg(this)">SHOW</button>
     <div style="margin-top: 25px; display: none;" id="box">
         <img src="../public/images/mensfashionfashionstore.jpg" alt="">
     </div>
     <script type="text/javascript">
-        document.querySelector("button").addEventListener("click", function(){
+        // const btn = document.querySelector("button");
+        function showimg(btn){
             const img = document.getElementById("box");
-            const data = this.textContent;
+            const data = btn.textContent;
            img.style.display = (data === 'SHOW') ? 'block' : 'none';
-           this.textContent = (data === 'SHOW') ? 'HIDE' : 'SHOW';
-        })
+           btn.textContent = (data === 'SHOW') ? 'HIDE' : 'SHOW';
+        }
+        // targetting via this 
+        // function showimg(){
+        //     const img = document.getElementById("box");
+        //     const data = btn.textContent;
+        //    img.style.display = (data === 'SHOW') ? 'block' : 'none';
+        //    btn.textContent = (data === 'SHOW') ? 'HIDE' : 'SHOW';
+        // }
+            // const btn = document.querySelector("button");
+            // btn.addEventListener("click", function(){
+            //     const img = document.getElementById("box");
+            //     const data = this.textContent;
+            //    img.style.display = (data === 'SHOW') ? 'block' : 'none';
+            //    this.textContent = (data === 'SHOW') ? 'HIDE' : 'SHOW';
+            // })
         </script>
 </body>
 </html>

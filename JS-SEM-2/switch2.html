@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    var n = '5';
+    switch (n){ //type must be exactly matched(It uses strict comparison)
+                //Internally the data would be stored in the form of key value pair (Map) for comparison
+            case 5: 
+                console.log("Five in number type");
+                break;
+            case '5':
+                console.log("Five in string type");
+                break;
+            default:
+                console.log("Default");
+                break;
+        }
+    </script>
+</body>
+</html>

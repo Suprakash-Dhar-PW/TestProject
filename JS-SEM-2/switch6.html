@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    var n = 2;
+    switch (n){ //RULE 1: (i)type must be exactly matched(It uses strict comparison)
+                //(ii)Internally the data would be stored in the form of key value pair (Map) for comparison
+            case 1: 
+                 //RULE 2: (i)Cases can be duplicated as JavaScript is Object based
+                                //(ii)As it is Object based so it would work as key value pair
+            case 2:
+            case 3: 
+                console.log("ONE, TWO, THREE");
+                break;
+            case 10:
+                console.log("10")
+                break;
+            default:    //RULE 3: Case Level value can be of any type because internaly it uses value for a map
+                console.log("Default");
+                break;//RULE 4: Even String type value is supported for a key in switch
+        }//RULE 5: It is possible to wirte one block for multiple cases
+    </script>
+</body>
+</html>

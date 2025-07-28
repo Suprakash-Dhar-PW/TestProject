@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="radio" name="gender" value="MALE" id="male"><label for="">MALE</label>
+    <input type="radio" name="gender" value="FEMALE" id="female"><label for="">FEMALE</label><br><br>
+    <button>submit</button>
+    <p id="msg"></p>
+    <script type="text/javascript">
+        document.querySelector("button").addEventListener("click", function () {
+            // const male = document.getElementById("male");
+            //const female = document.getElementById("female");
+            //const msg = document.getElementById("msg");
+
+            // if(male.checked){
+            //     msg.textContent = 'Male is selected';  //---> if else is code driven meanwhile switch is data driven
+            // }
+            // if(female.checked){
+            //     msg.textContent = 'Female is selected';
+            // }
+            const selected = document.querySelector('input[name="gender"]:checked');
+            const msg = document.getElementById("msg");
+            if (!selected) {
+                msg.textContent = "Please select a gender.";
+                return;
+            }
+            switch (selected.value) {
+                case "MALE":
+                    msg.textContent = "Male is selected";
+                    break;
+                case "FEMALE":
+                    msg.textContent = "Female is selected";
+                    break;
+                default:
+                    msg.textContent = "Invalid selection";
+            }
+        })
+    </script>
+</body>
+
+</html>

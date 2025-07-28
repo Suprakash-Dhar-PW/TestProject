@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width: 150px;">
+    <legend>Payment Details</legend>
+    <dl>
+    <dt>CardNumber</dt>
+    <dd><input type="text" id="card"></dd>
+    <dt>CVV</dt>
+    <dd><input type="text" id="cvv" size="3"></dd>
+    <dt>Expiry</dt>
+    <dd>
+        <select id="expiry">
+            <option value="Choose Expiry">Choose Expiry</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+        </select>
+    </dd>
+    </dl>
+    <button id="pay">Pay</button>
+    <p id="msg">
+
+    </p>
+  </fieldset>
+  <script type="text/javascript">
+        // document.getElementById("card").addEventListener("blur", function(){
+        //     const cvv = document.getElementById("cvv");
+        //     const expiry = document.getElementById("expiry");
+        //     const msg = document.getElementById("msg");
+
+        //     if(this.value == 22334455){
+        //         if(cvv.value == 222){
+        //             if(expiry.value == 2025){
+        //                 payContainer.style.display = 'block';
+        //                 document.getElementById("pay").addEventListener("click", function(){
+        //                     const msg = document.getElementById("msg");
+        //                     msg.innerHTML = `<span> ACCEPTED </span>`;
+        //                 }) 
+        //             }
+        //             else{
+        //                 msg.innerHTML = `<span> INVALID EXPIRY </span>`;
+        //             }
+        //         }
+        //         else{
+        //             msg.innerHTML = `<span> INVALID CVV </span>`;
+        //         }
+        //     }
+        //     else{
+        //         msg.innerHTML = `<span> INVALID CARD NUMBER </span>`;
+        //     }
+        // })
+        document.getElementById("pay").addEventListener("click", function () {
+      const card = document.getElementById("card").value;
+      const cvv = document.getElementById("cvv").value;
+      const expiry = document.getElementById("expiry").value;
+      const msg = document.getElementById("msg");
+
+      if (card == "22334455") {
+        if (cvv == "222") {
+          if (expiry == "2025") {
+            msg.innerHTML = `<p style="font-size: bold; color: green; font-family: Arial, Helvetica, sans-serif;">ACCEPTED</p>`;
+          } else {
+            msg.innerHTML = `<p style=" font-size: bold; color: red; font-family: Arial, Helvetica, sans-serif;">INVALID EXPIRY</p>`;
+          }
+        } else {
+          msg.innerHTML = `<p style="font-size: bold; color: green; font-family: Arial, Helvetica, sans-serif;">INVALID CVV</p>`;
+        }
+      } else {
+        msg.innerHTML = `<p style="font-size: bold; color: red; font-family: Arial, Helvetica, sans-serif;">INVALID CARD NUMBER</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
