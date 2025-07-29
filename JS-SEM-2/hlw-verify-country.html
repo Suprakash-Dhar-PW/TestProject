@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Mobile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 320px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+
+        .country-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .flag-box {
+            width: 40px;
+            height: 28px;
+            border: 1px solid #ccc;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056d2;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Verify Mobile</h2>
+
+        <label for="country-flag">Select Your Country</label>
+        <div class="country-row">
+            <img class="flag-box" id="country-flag" style="display:none;" alt="Flag" />
+            <select id="country-select">
+                <option value="">Select Country</option>
+                <option value="IN">India (+91)</option>
+                <option value="US">USA (+1)</option>
+                <option value="GB">UK (+44)</option>
+            </select>
+        </div>
+
+        <label for="mobile">Your Mobile</label>
+        <input type="text" id="mobile" placeholder="Enter mobile number" />
+
+        <button onclick="verify()">Verify</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const flagBox = document.getElementById("country-flag");
+        const countrySelect = document.getElementById("country-select");
+        const mobileInput = document.getElementById("mobile");
+        const message = document.getElementById("message");
+        let currentCode = "";
+
+        countrySelect.addEventListener("change", function () {
+            const country = countrySelect.value;
+
+            if (country === "IN") {
+                flagBox.src = "https://flagcdn.com/w40/in.png";
+                currentCode = "+91";
+                flagBox.style.display = "inline";
+                mobileInput.value = currentCode;
+                message.textContent = "";
+            }
+            else if (country === "US") {
+                flagBox.src = "https://flagcdn.com/w40/us.png";
+                currentCode = "+1";
+                flagBox.style.display = "inline";
+                mobileInput.value = currentCode;
+                message.textContent = "";
+            }
+            else if (country === "GB") {
+                flagBox.src = "https://flagcdn.com/w40/gb.png";
+                currentCode = "+44";
+                flagBox.style.display = "inline";
+                mobileInput.value = currentCode;
+                message.textContent = "";
+            }
+            else if (country === "") {
+                flagBox.style.display = "none";  // ✅ hides flag on "Select Country"
+                mobileInput.value = "";
+                currentCode = "";
+                message.textContent = "";
+            }
+        });
+
+
+        mobileInput.addEventListener("input", function () {
+            const pattern = new RegExp("^" + currentCode.replace("+", "\\+"));
+            if (!pattern.test(mobileInput.value)) {
+                mobileInput.value = currentCode;
+            }
+        });
+
+
+        function verify() {
+            const mobile = mobileInput.value.trim();
+
+            if (currentCode === "") {
+                message.style.color = "red";
+                message.textContent = "Please select a country.";
+                return;
+            }
+
+            const fullPattern = new RegExp("^" + currentCode.replace("+", "\\+") + "[0-9]{10}$");
+
+            if (!fullPattern.test(mobile)) {
+                message.style.color = "red";
+                message.textContent = "Number must start with " + currentCode + " followed by 10 digits.";
+                return;
+            }
+
+            message.style.color = "green";
+            message.textContent = "Verification sent to: " + mobile;
+
+        }
+
+    </script>
+</body>
+
+</html>
