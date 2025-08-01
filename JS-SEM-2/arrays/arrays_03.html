@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function displayData(...userData){
+            console.log(typeof userData);//(4) [10, 'sachin', true, 53.5] undefined
+            console.log(userData);//[]
+        }
+        
+        displayData([10, 'sachin', true, 53.5]);
+        function displayData(...userData){// Rest operator --> ...userData
+            const[userId, userName, ...otherData] = userData;
+            console.log(userId, userName);// 10, 'sachin'
+            console.log(otherData);//[true,53.5]
+        }
+        //What is Rest Operator?
+        //--> The rest operator is a syntax written asa three dots ... used to collect multiple elements into a single array.
+        //It's like saying "Gather all the remaining elements into this variable"
+
+        displayData(10, 'sachin', true, 53.5);
+    </script>
+</body>
+</html>

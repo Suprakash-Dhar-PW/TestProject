@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function displayData(){
+            return ['Fossil', 35000, true];
+        }
+        const [productName, productCost, isAvailable] = displayData();
+        console.log(productName, productCost, isAvailable);//array destructuring
+        //From ecmascript +6 version we can collect multiple values from an array into a single variable in a clean and simple way.
+        const [productName2, productCost2, isAvailable2, quantity] = displayData();
+        console.log(productName2, productCost2, isAvailable2, quantity);
+        // Point: Case 2: If value supplied by the user to the unpacked variable then that variable will be filled with meaningful value otherwise it would be filled with undefined
+        const [productName3, productCost3, isAvailable3, quantity3 = 'Not Disclosed'] = displayData();
+        console.log(productName3, productCost3, isAvailable3, quantity3);
+        //If we want to give a default value when the variable is not filled with meaningful data then we can use the following syntax
+
+        
+    </script>
+</body>
+</html>

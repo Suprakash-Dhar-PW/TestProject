@@ -1,0 +1,55 @@
+<!-- Array
+=>Non-Primitive
+=>Memory stored in Heap area
+=>Range and Size is not Fixed
+=>Homogeneous | Heterogeneous
+=>Dynamic
+=>No contiguous Memory
+=>Index based[type of index: number[need not to be number also]]
+
+How to create Array?
+=> We can create array in 2 ways
+    a.static approach
+        eg: let arr = [];
+            let arr = [10,'sachin', true, 53, 5,100]
+    b.dynamic approach
+        eg:let arr = new Array(2);
+            arr[0] = 'sachin'; arr[1] = 10; -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let arr = [10, 'sachin', 53.3, true];
+
+        for (const key in arr) {
+            console.log(`key : ${typeof key} => ${arr[key]} : ${typeof arr[key]}`);//key : string => 10 : number
+            //30 key : string => sachin : string
+            //30 key : string => 53.3 : number
+            //30 key : string => true : boolean
+        }
+
+        console.log("The length of the array is :", arr.length);//4
+        arr[4] = 100;
+        console.log("The length of the array is :", arr.length);//5
+
+        arr['siblings'] = false;
+        console.log(arr);//(5) [10, 'sachin', 53.3, true, 100, siblings: false]
+        console.log("The length of the array is :", arr.length);//5 //The length would not change as arr['siblings'] = false; is a key value pair and these are trated as objects so after inserting an object the length would not change
+
+        arr[10] = 'ArjunTendulkar';
+        console.log(arr);//(11) [10, 'sachin', 53.3, true, 100, empty × 5, 'ArjunTendulkar', siblings: false]
+
+        console.log(Object.keys(arr));//(7) ['0', '1', '2', '3', '4', '10', 'siblings']
+        console.log(Object.values(arr));//(7) [10, 'sachin', 53.3, true, 100, 'ArjunTendulkar', false]
+
+    </script>
+</body>
+
+</html>
