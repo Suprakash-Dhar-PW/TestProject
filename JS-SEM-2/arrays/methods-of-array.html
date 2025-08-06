@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['HOME', 'ELECTRONICS', 'FASHION', 'MENSWEAR', 'KIDSWEAR'];
+        let result = arr.map(function(value, index){
+            console.log(`${index}=>${value}`);
+            return value.toLowerCase();
+        })
+        console.log(result);
+
+        arr.forEach(function(value, index){
+            console.log(`${index}->${value}`);
+        })
+    </script>
+</body>
+</html>
+
+<!-- Methods of an array to read the elements
+    a. let result = map(function(value,index){
+        //create a new array and return
+    })
+     
+    b. foeEach(function(value,index){
+        //use for reading purpose only
+    })
+
+Difference Between forEach() and map()
+Feature            forEach()                 map()
+====================================================
+Return value       undefined                  New Array
+Purpose            Performs side effects(e.g, log)  Transform data
+Modifies Orignal?   Only if done explicitly         No -->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Checkbox</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        let arr = ['All', 'Electronics', 'Mobiles'];
+        let order = document.getElementById('container');
+
+        arr.forEach(function(value, index) {
+            let wrapper = document.createElement('div');
+            wrapper.innerHTML = `
+                <label>[${index}]</label>
+                <input type='checkbox'/>
+                <label>${value}</label>
+                <button onclick="del(this)">delete</button>
+                <br><br>
+            `;
+            order.appendChild(wrapper);
+        });
+
+        function del(button) {
+            button.parentNode.remove();
+        }
+    </script>
+</body>
+</html>

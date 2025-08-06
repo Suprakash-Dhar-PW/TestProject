@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <ol>
+    <li>ALL</li>
+    <li>ELECTRONICS</li>
+    <li>MOBILES</li>
+    <li>KIDSFASHION</li>
+  </ol>
+
+  <select name="" id="sel">
+
+  </select>
+
+  <div id="checkbox-container"></div>
+
+  <script>
+    let arr = ['ALL', 'ELECTRONICS', 'MOBILES', 'KIDSFASHION'];
+
+    let select = document.getElementById('sel');
+    arr.forEach(function(value, index){
+      let opt = document.createElement('option');
+      opt.textContent = value;
+      opt.value = value;
+      select.appendChild(opt);
+    });
+    
+
+    let checkboxContainer = document.getElementById('checkbox-container');
+    arr.forEach(function (value, index) {
+      let wrapper = document.createElement('div');
+      wrapper.innerHTML = `
+        <input type='checkbox'/>
+        <label>${value}</label> 
+        <br><br>
+      `;
+      checkboxContainer.appendChild(wrapper);
+    });
+
+  </script>
+</body>
+</html>
