@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function prepareFood(){
+           return new Promise(function(resolve, reject){
+                //async operation here.....
+                let isFoodAvailable = false;
+                setTimeout(function(){
+                if(isFoodAvailable){
+                    resolve("Food is available");
+                }else{
+                    reject("Food is not available");    //3
+                }
+            })}, 5000);
+       }
+
+        async function orderFood(){
+            console.log("Customer order the food");     //1
+            //handle promise
+            try{
+                let promise = await prepareFood();
+                console.log(promise);
+            }
+            catch(error){
+                console.log(error);
+            }
+        }   
+        orderFood();
+        console.log("Waiter serves the water");   //2
+    </script>
+</body>
+</html>
+
+async and await
+================
+->async/await is syntactic sugar over Promises.
+->It makes asynchronous code look like synchronous code, so it's easier to read and understrand.
+
+Syntax
+=======
+function somePromiseFunction(){
+    return new Promise(function(resolve, reject){
+        setTimeout(function(){
+
+        },5000)
+    })
+}

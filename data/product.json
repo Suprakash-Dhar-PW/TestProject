@@ -1,0 +1,8 @@
+{
+    "name":"Iphone16",
+    "cost":"89000",
+    "color": "Black",
+    "ROM":128,
+    "RAM":"8GB",
+    "MP": "A18 Chipset"
+}

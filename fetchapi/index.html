@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="product-info">
+        <p>Loading product data...</p>
+    </div>
+
+    <script>
+        // The path to your local JSON file, relative to this HTML file.
+        const apiUrl = '../data/product.json';
+
+        fetch(apiUrl)
+            .then(function(response) {
+                // Check if the response is successful (status in the range 200-299)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                // Parse the body of the response as JSON
+                return response.json();
+            })
+            .then(function(data) {
+                // 'data' is the parsed JSON object from product.json
+                console.log('Fetched data:', data);
+
+                // Display the fetched data on the webpage
+                const productInfoDiv = document.getElementById('product-info');
+                productInfoDiv.innerHTML = `
+                    <h1>${data.name}</h1>
+                    <ul>
+                        <li><strong>Cost:</strong> ${data.cost}</li>
+                        <li><strong>Color:</strong> ${data.color}</li>
+                        <li><strong>ROM:</strong> ${data.ROM}GB</li>
+                        <li><strong>RAM:</strong> ${data.RAM}</li>
+                        <li><strong>Processor:</strong> ${data.MP}</li>
+                    </ul>
+                `;
+            })
+            .catch(function(error) {
+                // Handle any errors that occurred during the fetch
+                console.error('There has been a problem with your fetch operation:', error);
+                document.getElementById('product-info').textContent = 'Failed to load product data.';
+            });
+    </script>
+</body>
+</html>

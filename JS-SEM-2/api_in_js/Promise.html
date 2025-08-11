@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise = new Promise(function(resolve, reject){
+            //async operation here.....
+            if(success){
+                resolve(result);  // fullfilled
+            }else{
+                reject(error);    //rejected
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- What is a Promise?
+=> A Promise is a placeholder for a value that will arrive in the future(usually after an async operation like an API call, timer, file read etc...).
+A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+Remember: "I promisse to give you the result later - either success or failure"
+
+Syntax of promise:
+let promise = new Promise(function(resolve, reject){
+    //async operation here.....
+    if(success){
+        resolve(result);  //fullfilled
+    }else{
+        reject(error);    //rejected
+    }
+});
+
+resolve() :: when async operation is succesful
+reject() :: when async operation is unsuccesful
+
+//handleing the promise
+promise
+    .then(function(success){
+        //resolve logic
+    }).catch(function(error){
+        //reject logic
+    }); -->

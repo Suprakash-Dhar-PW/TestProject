@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let id = setTimeout(function(){
+            console.log("Will never run");
+        },3000);
+        clearTimeout(id);
+    </script>
+</body>
+</html>
+
+<!-- Note:
+Purpose         Run a function after a delay
+Async/Sync      Asynchronous (Uses Web API)
+Blocks execution   No(non-blocking)
+Use cases           Delay, retry, simulate timeouts, UI updates
+Cancel it?          Yes, using clearTimeout(timerID) -->

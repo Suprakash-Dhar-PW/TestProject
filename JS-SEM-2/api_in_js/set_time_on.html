@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Start");
+        setTimeout(
+            function(){
+                console.log("Executed after 2 seconds");
+            },
+        2000) //2000 ms = 2 seconds
+        console.log("End");
+    </script>
+</body>
+</html>
+
+// What is setTimeout()?
+// => setTimeout() is a Web API function that lets us delay the execution of a piece of code by a given time(in milliseconds).
+// Syntax: setTimeout(callbackFunction, delayInMilliseconds, arg1, arg2, ......);
