@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        nav.items a {
+            padding: 8px 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .two {
+            position: absolute;
+            top: 3px;
+            right: 2px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            padding: 5px 8px;
+            font-size: 12px;
+        }
+
+        header {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="d-flex justify-content-between pt-2 bg-dark text-white">
+        <div class="ps-2">
+            <h4>Fakestore</h4>
+        </div>
+
+        <nav class="d-flex items"></nav>
+
+        <div class="me-2 cart-container">
+            <button class="btn btn-warning atc">
+                <i class="bi-cart3"></i> Add to Cart
+            </button>
+            <span class="bg-danger badge two">0</span>
+        </div>
+    </header>
+
+    <marquee class="bg-black text-white">
+        <i class="bi bi-lightning-charge-fill"></i> Holiday Deals 50% Off Limited Offer
+        <i class="bi bi-lightning-charge-fill"></i>
+    </marquee>
+
+    <section class="container mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <label class="fw-bold mb-2">Select Category</label>
+                <select id="categorySelect" class="form-control">
+                    <option value="all">All</option>
+                </select>
+            </div>
+            <div class="col-md-9">
+                <div class="row" id="productsContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let categoryUrl = "https://fakestoreapi.com/products/categories";
+        let productsUrl = "https://fakestoreapi.com/products";
+
+        let categorySelect = document.getElementById("categorySelect");
+        let productsContainer = document.getElementById("productsContainer");
+        let cartBadge = document.querySelector(".two");
+
+        let cartCount = 0;
+
+        function loadCategories() {
+            fetch(categoryUrl)
+                .then(function (res) {
+                    return res.json();
+                })
+                .then(function (categories) {
+                    categories.forEach(function (cat) {
+                        var option = document.createElement("option");
+                        option.value = cat;
+                        option.textContent = cat;
+                        categorySelect.appendChild(option);
+                    });
+                });
+        }
+
+        function loadProducts(category) {
+            if (typeof category === "undefined") {
+                category = "all";
+            }
+
+            let fetchUrl = productsUrl;
+            if (category !== "all") {
+                fetchUrl = productsUrl + "/category/" + encodeURIComponent(category);
+            }
+
+            fetch(fetchUrl)
+                .then(function (res) {
+                    return res.json();
+                })
+                .then(function (products) {
+                    productsContainer.innerHTML = "";
+
+                    products.forEach(function (product) {
+                        var card = document.createElement("div");
+                        card.className = "col-md-4 col-lg-3 mb-4";
+
+                        // The innerHTML with the referrerpolicy attribute
+                        card.innerHTML = `
+                    <div class="card h-100 shadow-sm">
+                        <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#fff;">
+                            <img src="${product.image}" alt="${product.title}" style="max-height:200px; max-width:100%; object-fit:contain;" referrerpolicy="no-referrer">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-size:14px; height:40px; overflow:hidden;">
+                                ${product.title}
+                            </h6>
+                            <p class="card-text fw-bold">$${product.price}</p>
+                            <button class="btn btn-danger btn-sm add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+
+                        productsContainer.appendChild(card);
+
+                        card.querySelector(".add-to-cart").addEventListener("click", function () {
+                            cartCount++;
+                            cartBadge.textContent = cartCount;
+                        });
+                    });
+                });
+        }
+
+        categorySelect.addEventListener("change", function () {
+            loadProducts(this.value);
+        });
+
+        window.onload = function () {
+            loadCategories();
+            loadProducts();
+        };
+    </script>
+
+</body>
+
+</html>
